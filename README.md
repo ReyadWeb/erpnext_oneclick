@@ -2,6 +2,10 @@
 
 One-command **production** installer for **ERPNext (Frappe) v15** on Ubuntu 22.04/24.04 using **Docker + Traefik + Let’s Encrypt**.
 
+- **Repo:** https://github.com/ReyadWeb/erpnext_oneclick
+- **Download ZIP:** https://github.com/ReyadWeb/erpnext_oneclick/archive/refs/heads/main.zip
+- **License:** https://github.com/ReyadWeb/erpnext_oneclick/blob/main/LICENSE
+
 ## Features
 - Single prompt for domain, passwords, and (optional) SMTP
 - Docker & Compose v2 installation
@@ -11,9 +15,21 @@ One-command **production** installer for **ERPNext (Frappe) v15** on Ubuntu 22.0
 - UFW firewall: allow 80/443, rate-limit SSH, deny MySQL from WAN
 - Logs to `/var/log/erpnext_oneclick.log`
 
-## Quick start
+## Quick start (copy installer via curl)
 ```bash
-# Upload and run on a fresh Ubuntu 22.04/24.04 server
+curl -fsSL https://raw.githubusercontent.com/ReyadWeb/erpnext_oneclick/main/install.sh -o install.sh
+chmod +x install.sh
+sudo ./install.sh
+```
+
+## Quick start (download repo zip)
+```bash
+# Download
+curl -L https://github.com/ReyadWeb/erpnext_oneclick/archive/refs/heads/main.zip -o erpnext_oneclick.zip
+
+# Unzip and run
+unzip erpnext_oneclick.zip
+cd erpnext_oneclick-main
 chmod +x install.sh
 sudo ./install.sh
 ```
@@ -38,4 +54,4 @@ docker compose run --rm site-creator
 ```
 
 ## License
-MIT
+MIT — see [https://github.com/ReyadWeb/erpnext_oneclick/blob/main/LICENSE](https://github.com/ReyadWeb/erpnext_oneclick/blob/main/LICENSE).
